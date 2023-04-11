@@ -9,6 +9,7 @@ const Img = () => {
         src={mobile}
         alt={"background-mobile"}
         className= {styles.mobile}
+        loading= 'eager'
       />
       <img src={desktop} alt={"background-desktop"} className={styles.desktop} />
     </div>

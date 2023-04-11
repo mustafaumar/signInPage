@@ -1,4 +1,6 @@
 import React, { useState , useReducer} from "react";
+import { FaEnvelopeOpen } from "react-icons/fa";
+import { FaKey } from "react-icons/fa";
 import styles from "./Login.module.css";
 const ACTIONS = {
   USER_INPUT: "user-input",
@@ -58,7 +60,7 @@ const Login = () => {
   return (
     <div>
       <form onSubmit={submitHandler}>
-        <div className={styles.control}>
+        <div className={styles.control} style={{ position: "relative" }}>
           <label htmlFor="email">Email Address</label>
           <input
             id="email"
@@ -71,9 +73,17 @@ const Login = () => {
               borderColor: emailState.isValid === false ? "red" : "",
             }}
           />
+          <FaEnvelopeOpen
+            style={{
+              position: "absolute",
+              right: "5%",
+              top: "53%",
+              color: "#7EBCC3",
+            }}
+          />
         </div>
 
-        <div className={styles.control}>
+        <div className={styles.control} style={{ position: "relative" }}>
           <label htmlFor="password">Password</label>
           <input
             id="password"
@@ -86,7 +96,17 @@ const Login = () => {
               borderColor: passwordState.isValid === false ? "red" : "",
             }}
           />
-          <a href={"/"} className= {styles.forget}>Forget Password?</a>
+          <FaKey
+            style={{
+              position: "absolute",
+              right: "5%",
+              top: "47%",
+              color: "#7EBCC3",
+            }}
+          />
+          <a href={"/"} className={styles.forget}>
+            Forget Password?
+          </a>
         </div>
         <button type="submit" className={styles.button} disabled={!formIsValid}>
           Login
