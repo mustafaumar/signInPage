@@ -1,0 +1,93 @@
+.control {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+}
+
+.control label,
+.control input {
+    display: block;
+}
+
+.control label {
+    font-family: 'Inter', sans-serif;
+    flex: 1;
+    margin-bottom: 0.5rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.control input {
+    all: unset;
+    flex: 3;
+    font: inherit;
+    padding: 0.35rem 0.35rem;
+    background: #FFFFFF;
+    border: 2px solid #7EBCC3;
+    border-radius: 7px;
+}
+
+.control input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+
+.button {
+    font-family: 'Open Sans', sans-serif;
+    font: inherit;
+    background: #216da3;
+    color: white;
+    padding: 0.75rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    width: 18em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:active {
+    background: #1d8ddd;
+    border-color: #1d8ddd;
+}
+
+.button:focus {
+    outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+    color: #fff;
+    cursor: not-allowed;
+    background: #7EBCC3;
+}
+
+.forget {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    color: #6BACB3;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+.forget:hover{
+    color: #1d8ddd;
+}
+
+@media (width >=400px) {
+    .control {
+        max-width: 20em;
+    }
+}
