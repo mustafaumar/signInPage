@@ -33,9 +33,14 @@
     display: flex;
     align-items: center;
     margin: auto;
+    transition: color 0.3s ease;
 }
 .signButton span{
     margin-left: .5em;
+}
+.signButton:hover {
+    background-color: black;
+    color: #FFFFFF;
 }
 
 .dashed {
