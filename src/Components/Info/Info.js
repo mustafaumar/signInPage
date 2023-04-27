@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Info.module.css";
-import { FaGoogle } from "react-icons/fa";
-
+import SignGoogle from "./SignGoogle";
 const Info = (props) => {
+
   return (
     <div>
       <div>
@@ -14,12 +14,7 @@ const Info = (props) => {
         </p>
       </div>
       <p className={styles.dashed}>Or</p>
-      <button className={styles.signButton}>
-        <i>
-          <FaGoogle />
-        </i>
-        <span>Sign in with Google</span>
-      </button>
+      <SignGoogle/>
     </div>
   );
 };
