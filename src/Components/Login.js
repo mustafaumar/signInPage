@@ -58,6 +58,8 @@ const Login = () => {
     event.preventDefault()
     // return (<div>{emailState.handler}</div>)
     alert(`Welcome ${emailState.handler.replace(/@gmail\.com/g, '')}`);
+    emailState.handler = "";
+    passwordState.handler = "";
   }
   return (
     <div>
