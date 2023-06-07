@@ -62,61 +62,66 @@ const Login = () => {
     passwordState.handler = "";
   }
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <div className={styles.control} style={{ position: "relative" }}>
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="example@rocket.gmail"
-            value={emailState.handler}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
-            style={{
-              borderColor: emailState.isValid === false ? "red" : "",
-            }}
-          />
-          <FaEnvelopeOpen
-            style={{
-              position: "absolute",
-              right: "5%",
-              top: "53%",
-              color: "#7EBCC3",
-            }}
-          />
-        </div>
+      <div>
+        <form onSubmit={submitHandler}>
+          <div className={styles.control} style={{ position: "relative" }}>
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="example@rocket.gmail"
+              value={emailState.handler}
+              onChange={emailChangeHandler}
+              onBlur={validateEmailHandler}
+              style={{
+                borderColor: emailState.isValid === false ? "red" : "",
+              }}
+            />
+            <FaEnvelopeOpen
+              style={{
+                position: "absolute",
+                right: "5%",
+                top: "53%",
+                color: "#7EBCC3",
+              }}
+            />
+          </div>
 
-        <div className={styles.control} style={{ position: "relative" }}>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Enter your password"
-            value={passwordState.handler}
-            onChange={passwordChangeHandler}
-            onBlur={validatePasswordHandler}
-            style={{
-              borderColor: passwordState.isValid === false ? "red" : "",
-            }}
-          />
-          <FaKey
-            style={{
-              position: "absolute",
-              right: "5%",
-              top: "47%",
-              color: "#7EBCC3",
-            }}
-          />
-          <a href={"/"} className={styles.forget}>
-            Forget Password?
-          </a>
-        </div>
-        <button type="submit" className={styles.button} disabled={!formIsValid}>
-          Login
-        </button>
-      </form>
-    </div>
+          <div className={styles.control} style={{ position: "relative" }}>
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              value={passwordState.handler}
+              onChange={passwordChangeHandler}
+              onBlur={validatePasswordHandler}
+              style={{
+                borderColor: passwordState.isValid === false ? "red" : "",
+              }}
+            />
+            <FaKey
+              style={{
+                position: "absolute",
+                right: "5%",
+                top: "47%",
+                color: "#7EBCC3",
+              }}
+            />
+            <a href={"/"} className={styles.forget}>
+              Forget Password?
+            </a>
+          </div>
+          <button
+            type="submit"
+            className={styles.button}
+            disabled={!formIsValid}
+          >
+            Login
+          </button>
+        </form>
+        
+      </div>
   );
 };
 

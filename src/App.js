@@ -4,7 +4,7 @@ import styles from './App.module.css'
 function App() {
   return (
     <div 
-     className={styles.body}>
+     className= {styles.body}>
       <UI/>
     </div>
   );

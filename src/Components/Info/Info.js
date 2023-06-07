@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Info.module.css";
 import SignGoogle from "./SignGoogle";
+
 const Info = (props) => {
 
   return (

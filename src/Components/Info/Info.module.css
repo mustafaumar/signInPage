@@ -12,7 +12,8 @@
     color: #6BACB3;
     transition: color 0.3s ease;
 }
-.signHere:hover{
+
+.signHere:hover {
     color: #1d8ddd;
 }
 
@@ -32,12 +33,15 @@
     color: #000000;
     display: flex;
     align-items: center;
+    box-shadow: 10px 10px 16px 3px rgba(0, 0, 0, 0.3);
     margin: auto;
     transition: color 0.3s ease;
 }
-.signButton span{
+
+.signButton span {
     margin-left: .5em;
 }
+
 .signButton:hover {
     background-color: black;
     color: #FFFFFF;

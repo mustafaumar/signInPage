@@ -1,37 +1,32 @@
-import React from "react";
 import styles from "./Info.module.css";
 import { FaGoogle } from "react-icons/fa";
-import axios from "axios";
-import { useGoogleLogin } from "@react-oauth/google";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from "./../../firebase";
+
+const provider = new GoogleAuthProvider();
 const SignGoogle = () => {
-  const login = useGoogleLogin({
-    onSuccess: async (response) => {
-      try {
-        const res = await axios.get(
-          "https://www.googleapis.com/oauth2/v3/userinfo",
-          {
-            headers: {
-              Authorization: `Bearer ${response.access_token}`,
-            },
-          }
-        );
-        // console.log(res.data);
-        alert(`Welcome ${res.data.name}`)
-      } catch (err) {
-        // console.log(err);
-        alert('An error encountered. Check the data connection')
-      }
-    }, //console.log(tokenResponse),
-  });
+  const Login = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // const credential = GoogleAuthProvider.credentialFromResult(result);
+        alert(`Dear ${result.user.displayName} , Sign-in successful.`)
+      })
+      .catch((error) => {
+        //  const credential = GoogleAuthProvider.credentialFromError(error);
+        //  console.log(credential);
+        alert('There is a problem with your Internet');
+        // ...
+      });
+  };
   return (
-    <React.Fragment>
-      <button onClick={login} className={styles.signButton}>
+    <div>
+      <button onClick={Login} className={styles.signButton}>
         <i>
           <FaGoogle />
         </i>
         <span>Sign in with Google</span>
       </button>
-    </React.Fragment>
+    </div>
   );
 };
 
