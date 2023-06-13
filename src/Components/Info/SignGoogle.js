@@ -8,8 +8,6 @@ const SignGoogle = () => {
   const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        //  const credential = GoogleAuthProvider.credentialFromResult(result);
-        // console.log(result.user.providerData[0].displayName);
         alert(`Dear ${result.user.providerData[0].displayName} , Sign-in successful.`)
       })
       .catch((error) => {
