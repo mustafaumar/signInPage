@@ -1,8 +1,12 @@
-.image {
+ .image {
     width: 100%;
-     display: flex;
-    /*justify-content: center; */
+    display: flex;
+    justify-content: center;
 }
+.mobile{
+    margin: auto;
+}
+
 
 .desktop {
     display: none;
@@ -13,6 +17,7 @@
         display: block;
     }
     .mobile{
+        margin: 0;
         display: none;
     }
 

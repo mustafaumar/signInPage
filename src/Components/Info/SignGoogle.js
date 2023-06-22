@@ -10,7 +10,7 @@ const SignGoogle = () => {
       .then((result) => {
         alert(`Dear ${result.user.providerData[0].displayName} , Sign-in successful.`)
       })
-      .catch((error) => {
+      .catch((error) => { 
         alert('There is a problem with your Internet');
         // ...
       });
